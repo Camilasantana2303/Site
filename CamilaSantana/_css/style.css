@@ -1,0 +1,667 @@
+
+
+:root {
+	--color-vermelho: rgb(211, 35, 50);
+	--color-rosa: rgb(209, 134, 175);
+	--color-branco: rgb(255, 255, 255);
+	--color-preto: rgb(0, 0, 0);
+	--color-azul: rgb(170, 225, 243);
+	--color-bege: rgb(254, 246, 219);
+	--color-amarelo: rgb(233, 237, 146);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+
+	flex-wrap: wrap;
+	height: 100vh;
+	flex: 1 1 100vw;
+	background-color: var(--color-bege);
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+	display: flex;
+}
+
+header {
+	background: var(--color-rosa);
+	height: 100px;
+	flex: 1 1 100vw;
+	justify-content: space-between;
+	text-decoration: none;
+	text-emphasis-color: var(--color-branco);
+	align-items: center;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+header #logo {
+	display: flex;
+	flex: 0 1 200px;
+	background: var(--color-rosa);
+
+}
+
+nav {
+	position: relative;
+	justify-content: center;
+	flex: 1 1 100%;
+	padding: 20px;
+}
+#menu {
+	background-color: rgba(254, 246, 219, 0.5);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#cadastre {
+	background-color: var(--color-branco);
+	padding: 10px;
+	white-space: nowrap;
+	margin-right: 30px;
+	box-shadow: 0 5px 0 var(--color-vermelho);
+	border-radius: 25px;
+}
+
+/* #busca {
+	background-color: var(--color-branco);
+	border: solid 2px var(--color-vermelho);
+	border-radius: 10px;
+	width: 300px;
+	height: 32px; 
+	float: left;
+	background-color: transparent;
+	padding-left: 5px;
+	font-size: 18px;
+	border: none;
+	height: 32px;
+	width: 100px; 
+} */
+
+#busca {
+	padding-left: 5px;
+	font-size: 18px;
+	border: none;
+	height: 32px;
+	
+}
+#txtBusca{
+	margin: 0px;
+	border: 2px solid var(--color-vermelho);
+	outline: transparent;
+	padding: 5px 10px;
+	width: 350px;
+	border-radius: 20px;
+}
+
+
+#openMenu,
+#closeMenu {
+	border: none;
+	background: none;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0px 5px 0px 5px;
+	display: none;
+}
+
+
+header a {
+	/* margin: 0 3%; */
+	font-size: 15pt;
+}
+
+nav a {
+	/* margin: 0 3%; */
+	font-size: 15pt;
+}
+
+a {
+	color: black;
+}
+
+main {
+	position: relative;
+	flex: 20 1 500px;
+	flex-direction: column;
+	align-items: center;
+}
+
+aside {
+	/* flex-direction: column;
+	 */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 300px;
+	flex: 1 1 200px;
+}
+
+.aside {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+.aside::before {
+	content: '';
+	position: absolute;
+	background-image: url(../_img/ImagemDeFundo.png);
+	background-repeat: repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: .15;
+}
+
+footer {
+	height: 100px; 
+	flex: 1 1 100vw;
+}
+
+
+@media only screen and (max-width: 717px) {
+
+	#openMenu,
+	#closeMenu {
+		display: block;
+	}
+
+	#openMenu {
+		margin-left: auto;
+	}
+
+	#closeMenu {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+
+	nav {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(255, 255, 255, 0.8);
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		display: none;
+		opacity: 0;
+		transition: 0.3s;
+	}
+
+	nav a {
+
+		margin: 3%;
+	}
+
+	
+	
+}
+
+#closeMenu {
+	background-color: red;
+}
+
+
+/*==================*/
+/*.  M.MODIFICACAO  */
+/*==================*/
+
+
+.pimg1 {
+	position: static;
+	background-position: center;
+	background-attachment: scroll;
+}
+
+
+.ingredientes {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	padding: 20px;
+
+}
+
+
+.ptext {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+.ptext .border {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgb(255, 255, 255);
+	padding: 20px;
+}
+
+img {
+	align-items: center;
+	width: 500px;
+	right: 10px;
+}
+
+
+/*====================*/
+/*. SiteTorta */
+/*===================*/
+
+.torta {
+	background-image: url(../_img/TortaDeMorango.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+li {
+	list-style: none;
+}
+
+#container {
+	background-image: url(../_img/TortaDeMorango.jpg);
+}
+
+.receita {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.titulo-torta {
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	background-color: rgba(0, 0, 0, 0.416);
+}
+
+.borda {
+	color: rgb(255, 255, 255);
+	padding: 20px;
+}
+
+li {
+	text-decoration: none;
+}
+
+/*====================*/
+/*. Sitebolo         */
+/*===================*/
+
+.gallery {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.gallery-item {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 400px;
+  }
+  
+.gallery-item:hover {
+	border: 1px solid #777;
+  }
+  
+.gallery-item img {
+	width: 100%;
+	height: auto;
+  }
+  
+.desc {
+	padding: 15px;
+	text-align: center;
+  }
+
+
+
+footer h3 {
+	
+	/* padding-top: 50px; */
+	color: var(--color-preto);
+	line-height: 20px;
+}
+
+footer h4 {
+	/* padding-top: 70px; */
+	line-height: 20px;
+	color: var(--color-azul);
+	align-items: center;
+
+}
+
+.icon:hover {
+	transform: scale(1.1);
+}
+
+.icon {
+	width: 40px;
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	/* padding-top: 80px; */
+	align-items: colum;
+
+}
+
+aside p {
+	/* margin: 50px; */
+	text-align: right;
+	color: var(--color-vermelho)
+	
+	
+}
+
+#venhaconhecer {
+	width: 400px;
+	/* padding-top: 70px; */
+}
+
+.iconPrincipal{
+	width: 50px;
+	margin: 0px;
+	
+}
+
+.logo{
+	display: flex;
+	margin: 0 3%;
+}
+
+#daSemana img{
+	width: 300px;
+	right: 10px;
+}
+
+
+
+footer {
+	background-color: var(--color-rosa);
+	align-items: center;
+	justify-content: center;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-bege);
+}
+
+#bodyLogin{
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+#bodyLogin::before {
+	content: '';
+	position: absolute;
+	background-image: url(../_img/ImagemDeFundo.png);
+	background-repeat: repeat;
+	background-size: 30%;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: .15;
+}
+
+main::before {
+	content: '';
+	position: absolute;
+	background-image: url(../_img/ImagemDeFundo.png);
+	background-repeat: repeat;
+	background-size: 30%;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: .15;
+}
+
+
+
+#containerCadastre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin: 100px;
+}
+.card{
+    width: 100%;
+    background-color: var(--color-rosa);
+    padding: 40px;
+    border-radius: 5px;
+    width: 280px;
+    box-shadow: 2px 2px 2px 1px black;
+}
+
+
+.entrar{
+    padding-bottom: 50px;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.header::after{
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -17px;
+
+}
+
+label{
+    /* color:#fff; */
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.entrada-dados{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.entrada-dados input{
+    margin-top: 10px;
+    padding: 5px 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ededed;
+    outline: none;
+    color: #fff;
+}
+
+.footer .submit{
+    width: 100%;
+    height: 40px;
+    background-color: #a2a8d3;
+    border: none;
+
+    margin: 10px 0;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    transition: 0.5;
+
+}
+
+
+.footer a{
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+ /* CARROSSEL SLIDE -- INICIO */
+ .slider_container {
+    margin:  10px 15px;
+    position: relative;
+    width: 70%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* animation é usado para animar outras propriedades CSS 
+    ease-in-out: realiza a transição com o início e final lentos; */
+    animation: 18s ease-in-out sliding infinite;
+  }
+  
+  .slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+  }
+  
+  .slide.um {
+    background-image: url(/_img/BoloDeCenoura.webp);
+	background-size:cover;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+
+  }
+  .slide.dois {
+    background-image: url(/_img/tortinhaamoran.jpg);
+	background-size:cover;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+
+  }
+  .slide.tres {
+    background-image: url(/_img/Brigadeirotrad.jpg);
+	background-size:cover;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+
+  }
+
+  .slide.quatro {
+    background-image: url(/_img/leiteNinho.jpg);
+	background-size:cover;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+
+
+  @keyframes sliding {
+    0% {
+    
+      transform: translateX(0%);
+    }
+    5% {
+      transform: translateX(0%);
+    }
+    35% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    80% {
+      transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-300%);
+      }
+
+  }
+  #entrada{
+	background-color: var(--color-bege);
+	margin: 10px;
+    outline: transparent;
+    padding: 10px 10px;
+    border-radius: 30px;
+  }
+
+  #inscrito{
+	/* position:absolute; */
+	font-size: medium;
+	padding-left: 55px;
+  }
+
+  video{
+	margin: auto;
+	padding: 10px;
+	margin-left: 100px;
+	
+  }
+
+
+  #pave{
+	border-bottom: 3px solid var(--color-rosa);
+    height: 50px;
+	color: var(--color-rosa);
+	line-height: 40px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-top: 60px;
+}
+
+#videorec{
+	color: var(--color-preto);
+	line-height: 30px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-top: 20px;
+}
+
+
+
+  
+
+
+
+
+
+ 
